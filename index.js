@@ -16,11 +16,11 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-app.get("/",(req,res)=>{
-    res.send("This is the a backend server");
 app.use("/user",userRouter);
 app.use("/expense-tracker", expenseRouter);
 })
+app.get("/",(req,res)=>{
+    res.send("This is the a backend server");
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running at port ${PORT}`);
